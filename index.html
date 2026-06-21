@@ -1,0 +1,133 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="script" href="script.js">
+<title>
+Book Assembly
+</title>
+</head>
+
+<body>
+<!----<p>testing</p>--->
+<div id="book" class="booking-cont">
+
+<div class="mapof">
+
+<img src="map.png" width="838.5" height="390.5" class="bgimg">
+
+<div class="hotspot" id="Main-Stage" style="left: 10.5%; top: 15%; width: 19%; height: 40%;">
+</div> <!--done alignment--->
+
+<div class="hotspot" id="Jr-Block-Stage" style="left: 12.5%; top: 80%; width: 15%; height: 10%;">
+</div> 
+
+<div class="hotspot" id="MPH" style="left: 35%; top: 77.5%; width: 15%; height: 10%;">
+</div>
+
+<div class="hotspot" id="Room-no.-14" style="left: 45%; top: 35%; width: 7%; height: 41%;">
+</div>
+
+
+
+</div>
+</div>
+
+<!-- Booking Form UI Panel -->
+ 
+<!-- The Booking Panel Popup Overlay -->
+<div id="booking-panel" style="display: none;">
+  <div class="panel-content">
+    <h3 id="selected-room-title">Book Room</h3>
+    
+    <!-- Time Selector -->
+    <div class="form-group">
+      <label for="booking-time">Select Date & Time:</label>
+      <input type="datetime-local" id="booking-time" required>
+    </div>
+
+    <hr>
+    <h4>Remarks & Requirements</h4>
+
+    <!-- Booking For (Text Input) -->
+    <div class="form-group">
+      <label for="booking-for">Booking For (Event Name):</label>
+      <input type="text" id="booking-for" placeholder="e.g., Guest Lecture">
+    </div>
+
+    <!-- Carpets Needed (Number Input) -->
+    <div class="form-group">
+      <label for="carpets">Carpets Needed (Qty):</label>
+      <input type="number" id="carpets" min="0" value="0">
+    </div>
+
+    <!-- Total Viewers (Number Input) -->
+    <div class="form-group">
+      <label for="total-viewers">Total Viewers (Qty):</label>
+      <input type="number" id="total-viewers" min="0" value="0">
+    </div>
+
+    <!-- Class(es) Viewing (Dropdown Multi/Single Selection Option) -->
+    <div class="form-group">
+      <label for="class-viewing">Class(es) Viewing:</label>
+      <select id="class-viewing">
+        <option value="">-- Select Class --</option>
+        <option value="Class 1-5">Class 1 to 5</option>
+        <option value="Class 6-8">Class 6 to 8</option>
+        <option value="Class 9-10">Class 9 to 10</option>
+        <option value="Class 11-12">Class 11 to 12</option>
+      </select>
+    </div>
+
+    <!-- Sections Viewing (Dropdown Multi/Single Selection Option) -->
+    <div class="form-group">
+      <label for="sections-viewing">Sections Viewing:</label>
+      <select id="sections-viewing">
+        <option value="">-- Select Section --</option>
+        <option value="A-B">Sections A & B</option>
+        <option value="C-D">Sections C & D</option>
+        <option value="All Sections">All Sections</option>
+      </select>
+    </div>
+
+    <!-- Chairs Needed (Number Input) -->
+    <div class="form-group">
+      <label for="chairs">Chairs Needed (Qty):</label>
+      <input type="number" id="chairs" min="0" value="0">
+    </div>
+
+    <!-- Other Requirements (Textarea Input) -->
+    <div class="form-group">
+      <label for="other-requirements">Other Requirements:</label>
+      <textarea id="other-requirements" rows="3" placeholder="Any extra sound systems, projector setup, etc..."></textarea>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="button-container">
+      <button id="submit-booking">Confirm Booking</button>
+      <button id="close-panel" type="button">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- legacy code, again.
+<div id="booking-panel" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc; max-width: 300px; margin-left: 25px;">
+    <h3 id="selected-room-title">Book Room</h3>
+    <label>Select Date & Time:</label><br>
+    <input type="datetime-local" id="booking-time" required><br><br>
+    <button id="submit-booking">Confirm Booking</button>
+  </div> -->
+
+
+
+<script src="script.js"></script>
+
+
+<!--API KEYS DONT TOUCH---->
+</body>
+</html>
